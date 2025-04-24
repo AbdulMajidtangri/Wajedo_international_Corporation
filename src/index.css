@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-steel-800 dark:bg-steel-900 dark:text-white;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold mb-4 leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold mb-3;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold mb-2;
+  }
+
+  p {
+    @apply mb-4 text-base md:text-lg;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md font-medium 
+           transition-colors focus-visible:outline-none focus-visible:ring-2 
+           focus-visible:ring-offset-2 disabled:opacity-50 
+           disabled:pointer-events-none ring-offset-white;
+  }
+  
+  .btn-primary {
+    @apply bg-blueprint-600 text-white hover:bg-blueprint-700 
+           h-11 px-4 py-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-steel-200 text-steel-900 hover:bg-steel-300 
+           h-11 px-4 py-2;
+  }
+  
+  .btn-accent {
+    @apply bg-safety-500 text-steel-900 hover:bg-safety-600 
+           h-11 px-4 py-2;
+  }
+}
+
+html, body {
+  @apply h-full scroll-smooth;
+}
+body::-webkit-scrollbar{
+  display: none
+}
+
+#root {
+  @apply flex flex-col min-h-screen;
+}
