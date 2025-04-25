@@ -41,9 +41,7 @@ const ProjectDetailPage = () => {
         <PageTransition>
             <div className=" mt-4 pt-20 bg-white dark:bg-gray-900">
                 <div className="container mx-auto px-4 max-w-6xl">
-                    {/* Main content - optimized image sizing */}
-                    <div className="flex flex-col lg:flex-row gap-8 mb-8"> {/* Reduced mb from 12 to 8 */}
-                        {/* Image column */}
+                    <div className="flex flex-col lg:flex-row gap-8 mb-8"> 
                         <div className="lg:w-1/2">
                             <div className="rounded-lg overflow-hidden shadow-md">
                                 <img 

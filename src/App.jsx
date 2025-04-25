@@ -1,18 +1,17 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
-import Header from './components/common/Header'
-import Footer from './components/common/Footer'
-
-// Import pages
-import Home from './pages/Home'
-import About from './pages/About'
-import Services from './pages/Services'
-import Projects from './pages/Projects'
-import Contact from './pages/Contact'
-import NotFound from './pages/NotFound'
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
+import ProjectDetailPage from './pages/ProjectDetail'; // Make sure this import is correct
 
 function App() {
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     <>
@@ -24,6 +23,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:id" element={<ProjectDetailPage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
@@ -31,7 +31,7 @@ function App() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
