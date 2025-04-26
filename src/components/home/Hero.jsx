@@ -191,7 +191,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/10 dark:bg-black/20 z-5"></div>
       
       {/* Smaller content container */}
-      <div className="relative z-20 w-full max-w-4xl px-6 lg:max-w-5xl xl:max-w-6xl">
+      <div className="relative z-20 w-full max-w-4xl px-6 pt-12 lg:max-w-5xl xl:max-w-6xl">
         <motion.div 
           className="bg-white/85 dark:bg-steel-900/90 backdrop-blur-lg p-8 lg:p-12 rounded-xl shadow-2xl border border-white/30"
           initial={{ opacity: 0, y: 20 }}
@@ -251,7 +251,6 @@ const Hero = () => {
         </motion.div>
       </div>
       
-      {/* Bottom gradient with grid pattern overlay */}
       <div className="absolute bottom-0 left-0 w-full h-40 z-10">
         <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-steel-900 to-transparent"></div>
         <div 
